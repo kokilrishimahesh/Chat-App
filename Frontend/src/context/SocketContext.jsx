@@ -17,7 +17,7 @@ const SocketContextProvider = ({ children }) => {
         });
 
         socketInstance.on('connect_error', (error) => {
-            console.error('Socket connection error:', error);
+            console.error('Socket connection error:', error.message);
         });
 
         socketInstance.on('disconnect', () => {
